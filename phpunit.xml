@@ -1,0 +1,20 @@
+<phpunit>
+    <filter>
+        <whitelist processUncoveredFilesFromWhitelist="true">
+            <directory suffix=".php">src</directory>
+            <exclude>
+                <directory>src/shared</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+    <groups>
+        <exclude>
+            <group>payment</group>
+        </exclude>
+    </groups>
+    <logging>
+        <log type="junit" target="tests/_output/logfile.xml"/>
+        <log type="testdox-html" target="tests/_output/testdox.html"/>
+        <log type="testdox-text" target="tests/_output/testdox.txt"/>
+    </logging>
+</phpunit>
