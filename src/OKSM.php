@@ -28,6 +28,8 @@ final class OKSM implements \dmitridad\oksm\contracts\OKSM, \JsonSerializable
                 $country['ALFA3'] ?? null
             );
         }
+
+        ksort($this->countries);
     }
 
     private function __clone()
